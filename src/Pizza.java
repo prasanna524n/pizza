@@ -5,7 +5,7 @@ public class Pizza {
     private int extraToppingsPrice = 120;
     private Boolean isExtraToppingsAdded = false;
     private Boolean isOptedForTakeAway = false;
-    private Boolean isExtraCheeseAdded = false;  // No extra } here
+    private Boolean isExtraCheeseAdded = false;  
     private int backPack = 20;
     private int basePizzaPrice;
 
@@ -42,7 +42,7 @@ public class Pizza {
     public void getBillo() {
         String bill = "";
         System.out.println("Pizza: " + basePizzaPrice);
-        bill += "Extra cheese added: " + extraCheesePrice + "\n";
+        if (isExtraCheeseAdded){ bill += "Extra cheese added: " + extraCheesePrice + "\n";
         if (isExtraToppingsAdded) {
             bill += "Extra Toppings added: " + extraToppingsPrice + "\n";
             if (isOptedForTakeAway) {
@@ -52,4 +52,6 @@ public class Pizza {
             System.out.println(bill);
         }
     }
-}  // This } closes the class at the end
+       
+    }
+} 
